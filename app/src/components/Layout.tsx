@@ -48,6 +48,15 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
       >
         Story
       </NavLink>
+      <NavLink
+        to="/affiliates"
+        onClick={onClick}
+        className={({ isActive }) =>
+          `label link-underline ${isActive ? 'text-bone' : 'text-bone-dim'} hover:text-bone transition-colors`
+        }
+      >
+        Affiliates
+      </NavLink>
     </>
   );
 }
