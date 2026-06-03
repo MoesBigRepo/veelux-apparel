@@ -140,6 +140,7 @@ function Footer() {
           links={[
             { label: 'Our Story', to: '/about' },
             { label: 'New Arrivals', to: '/collections/new-arrivals' },
+            { label: 'Affiliates', to: '/affiliates' },
           ]}
         />
       </div>

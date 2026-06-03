@@ -44,6 +44,80 @@ export function About() {
   );
 }
 
+/* -------------------------------- Affiliates ------------------------------- */
+// The live affiliate program runs on the brand's GoAffPro portal (same as the
+// original site's "Affiliaters" link). Signup, login, and commission terms live there.
+const GOAFFPRO_URL = 'https://veeluxapparel.goaffpro.com/';
+
+export function Affiliates() {
+  const hero = getProduct('veelux-mens-luxury-black-hoodie') || getProduct('rhinestone-shirt');
+  const steps = [
+    { n: '01', t: 'Apply', d: 'Join the program in seconds and get your unique referral link.' },
+    { n: '02', t: 'Share', d: 'Put Veelux in front of your people — posts, stories, your link in bio.' },
+    { n: '03', t: 'Earn', d: 'Get paid on every sale that comes through your link. All eyes on you.' },
+  ];
+  return (
+    <>
+      <Seo
+        title="Affiliates"
+        description="Rep Veelux and get paid. Join the Veelux affiliate program — share your link, earn on every drop you move."
+        path="/affiliates"
+        image={hero?.imagePaths[0]}
+      />
+      <section className="relative h-[55vh] min-h-[400px] overflow-hidden">
+        {hero && <img src={asset(hero.imagePaths[0])} alt="Veelux affiliate program" className="absolute inset-0 h-full w-full object-cover opacity-50" />}
+        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
+          <Reveal>
+            <p className="label mb-5">Affiliate Program</p>
+            <h1 className="display text-5xl sm:text-8xl">Rep <span className="shimmer-text">Veelux</span></h1>
+            <p className="mt-6 max-w-lg text-bone-dim leading-relaxed">
+              Turn your influence into income. Share the drops you love and earn on every sale.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1100px] px-5 sm:px-8 mt-20">
+        <div className="grid gap-10 sm:grid-cols-3">
+          {steps.map((s, i) => (
+            <Reveal key={s.n} delay={i * 0.08}>
+              <p className="display text-4xl text-bone-faint">{s.n}</p>
+              <h2 className="label mt-4">{s.t}</h2>
+              <p className="mt-3 text-bone-dim text-sm leading-relaxed">{s.d}</p>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-20 border-t hairline pt-12 flex flex-col items-center text-center">
+          <h2 className="display text-3xl sm:text-5xl max-w-xl">Ready when you are.</h2>
+          <p className="mt-5 max-w-md text-bone-dim leading-relaxed">
+            Sign up, log in, and see your commission terms on the Veelux affiliate portal.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={GOAFFPRO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-bone text-obsidian px-10 py-4 label hover:bg-shimmer transition-colors duration-400"
+            >
+              Join the Program
+            </a>
+            <a
+              href={GOAFFPRO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border hairline px-10 py-4 label text-bone hover:bg-bone hover:text-obsidian transition-colors duration-500"
+            >
+              Affiliate Login
+            </a>
+          </div>
+        </Reveal>
+      </section>
+    </>
+  );
+}
+
 /* --------------------------------- Contact --------------------------------- */
 export function Contact() {
   return (

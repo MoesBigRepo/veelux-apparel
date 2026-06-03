@@ -11,6 +11,7 @@ const CollectionsIndex = lazy(() =>
   import('./pages/Collection').then((m) => ({ default: m.CollectionsIndex })),
 );
 const About = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.About })));
+const Affiliates = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.Affiliates })));
 const Contact = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.Contact })));
 const Policy = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.Policy })));
 
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/collections" element={<Page><CollectionsIndex /></Page>} />
           <Route path="/collections/:handle" element={<Page><Collection /></Page>} />
           <Route path="/about" element={<Page><About /></Page>} />
+          <Route path="/affiliates" element={<Page><Affiliates /></Page>} />
           <Route path="/contact" element={<Page><Contact /></Page>} />
           <Route path="/policies/:handle" element={<Page><Policy /></Page>} />
           <Route path="*" element={<Page><NotFound /></Page>} />
