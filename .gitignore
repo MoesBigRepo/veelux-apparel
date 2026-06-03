@@ -1,0 +1,17 @@
+# Dependencies / build output (CI rebuilds from source)
+node_modules/
+dist/
+dist-ssr/
+
+# Raw scrape cache + tooling state (not source of truth)
+.firecrawl/
+.claude-flow/
+.vercel/
+
+# Local / editor
+*.local
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/

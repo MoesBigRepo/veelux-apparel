@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+
+@import '@fontsource-variable/archivo';
+@import '@fontsource-variable/inter';
+@import '@fontsource/jetbrains-mono/400.css';
+
+/* ----------------------------------------------------------------------------
+   VEELUX design system — dark-luxe rhinestone streetwear
+   Derived from peer study (image-first, mono captions, restraint) inverted to dark.
+---------------------------------------------------------------------------- */
+@theme {
+  --color-obsidian: #0a0a0b;
+  --color-obsidian-2: #121214;
+  --color-obsidian-3: #1a1a1d;
+  --color-bone: #f4f1ea;
+  --color-bone-dim: #a8a39a;
+  --color-bone-faint: #6d685f;
+  --color-hairline: #2a2a2e;
+  --color-shimmer: #d8d2c4; /* warm silver rhinestone */
+  --color-blush: #e8b9c8; /* women's-line nod */
+
+  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --tracking-wordmark: 0.42em;
+  --tracking-label: 0.28em;
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-obsidian);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--color-shimmer);
+  color: var(--color-obsidian);
+}
+
+/* utility classes ----------------------------------------------------------- */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-bone-dim);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: var(--tracking-wordmark);
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.hairline {
+  border-color: var(--color-hairline);
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    100deg,
+    var(--color-bone) 0%,
+    var(--color-bone) 38%,
+    #ffffff 50%,
+    var(--color-shimmer) 62%,
+    var(--color-bone) 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s var(--ease-luxe) infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 140% 0;
+  }
+  50% {
+    background-position: -40% 0;
+  }
+}
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease-luxe);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

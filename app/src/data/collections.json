@@ -1,0 +1,114 @@
+[
+  {
+    "handle": "new-arrivals",
+    "title": "New Arrivals",
+    "productHandles": [
+      "veelux-mens-luxury-black-hoodie",
+      "veelux-mens-luxury-black-sweatpants",
+      "veelux-womens-luxury-pink-sweatpants",
+      "veelux-womens-luxury-pink-hoodie",
+      "veelux-mens-luxury-rhinestone-flannel-shirt"
+    ]
+  },
+  {
+    "handle": "frontpage",
+    "title": "Featured",
+    "productHandles": [
+      "rhinestone-shirt",
+      "veelux-mens-luxury-rhinestone-flannel-shirt"
+    ]
+  },
+  {
+    "handle": "men",
+    "title": "Men",
+    "productHandles": [
+      "veelux-mens-luxury-black-hoodie",
+      "veelux-mens-luxury-black-sweatpants",
+      "veelux-mens-luxury-rhinestone-flannel-shirt"
+    ]
+  },
+  {
+    "handle": "womens-streetwear",
+    "title": "Women",
+    "productHandles": [
+      "veelux-womens-luxury-pink-sweatpants",
+      "veelux-womens-luxury-pink-hoodie"
+    ]
+  },
+  {
+    "handle": "hoodies",
+    "title": "Hoodies",
+    "productHandles": [
+      "veelux-mens-luxury-black-hoodie",
+      "veelux-womens-luxury-pink-hoodie"
+    ]
+  },
+  {
+    "handle": "sweatpants",
+    "title": "Sweatpants",
+    "productHandles": [
+      "veelux-mens-luxury-black-sweatpants",
+      "veelux-womens-luxury-pink-sweatpants"
+    ]
+  },
+  {
+    "handle": "jean",
+    "title": "Jeans",
+    "productHandles": [
+      "rhinestone-star-power-jean-special-edition"
+    ]
+  },
+  {
+    "handle": "plain-jean-trouser",
+    "title": "Denim & Trousers",
+    "productHandles": [
+      "plain-jean"
+    ]
+  },
+  {
+    "handle": "jacket",
+    "title": "Jackets",
+    "productHandles": [
+      "jean-jacket"
+    ]
+  },
+  {
+    "handle": "flannels",
+    "title": "Flannels",
+    "productHandles": [
+      "veelux-mens-luxury-rhinestone-flannel-shirt"
+    ]
+  },
+  {
+    "handle": "all-products",
+    "title": "All Products",
+    "productHandles": [
+      "rhinestone-shirt",
+      "jean-jacket",
+      "rhinestone-star-power-jean-special-edition",
+      "untitled-oct24_15-22",
+      "plain-jean",
+      "veelux-mens-luxury-black-hoodie",
+      "veelux-mens-luxury-black-sweatpants",
+      "veelux-mens-luxury-rhinestone-flannel-shirt",
+      "veelux-womens-luxury-pink-sweatpants",
+      "veelux-womens-luxury-pink-hoodie"
+    ]
+  },
+  {
+    "handle": "all",
+    "title": "Shop All",
+    "productHandles": [
+      "jean-jacket",
+      "rhinestone-star-power-jean-special-edition",
+      "plain-jean",
+      "untitled-oct24_15-22",
+      "rhinestone-shirt",
+      "veelux-mens-luxury-black-hoodie",
+      "veelux-mens-luxury-rhinestone-flannel-shirt",
+      "veelux-mens-luxury-black-sweatpants",
+      "veelux-womens-luxury-pink-hoodie",
+      "veelux-womens-luxury-pink-sweatpants"
+    ]
+  }
+]
