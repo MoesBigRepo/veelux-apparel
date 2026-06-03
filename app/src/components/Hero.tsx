@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, type RefObject } from 'react';
 import { asset, getProduct } from '../lib/data';
 import { EASE } from './Motion';
 
@@ -22,17 +22,7 @@ export function Hero() {
     <section ref={ref} className="relative h-[92vh] min-h-[560px] w-full overflow-hidden">
       <motion.div style={{ y, scale }} className="absolute inset-0">
         {/* Seedance 2.0 brand film; poster carries LCP and shows if video absent/reduced-motion */}
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          poster={POSTER}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-        >
-          <source src={asset('/assets/brand/hero.mp4')} type="video/mp4" />
-        </video>
+        <HeroVideo poster={POSTER} />
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-transparent to-obsidian" />
         <div className="absolute inset-0 bg-obsidian/25" />
       </motion.div>
@@ -90,5 +80,66 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+/**
+ * Two stacked <video> layers that crossfade into each other at the loop seam,
+ * so the brand film loops forever with no hard cut. Reduced-motion users get the
+ * still poster only. The crossfade also masks any imperfect first/last-frame match.
+ */
+const XFADE = 0.7; // seconds of overlap at the loop point
+
+function HeroVideo({ poster }: { poster?: string }) {
+  const reduce = useReducedMotion();
+  const aRef = useRef<HTMLVideoElement>(null);
+  const bRef = useRef<HTMLVideoElement>(null);
+  const [front, setFront] = useState<'a' | 'b'>('a');
+  const src = asset('/assets/brand/hero.mp4');
+
+  if (reduce) {
+    return (
+      <div
+        className="absolute inset-0 h-full w-full bg-cover bg-center"
+        style={poster ? { backgroundImage: `url(${poster})` } : undefined}
+      />
+    );
+  }
+
+  const handleTime = (which: 'a' | 'b') => () => {
+    if (front !== which) return;
+    const cur = (which === 'a' ? aRef : bRef).current;
+    const other = (which === 'a' ? bRef : aRef).current;
+    if (!cur || !other || !cur.duration) return;
+    if (cur.currentTime >= cur.duration - XFADE) {
+      other.currentTime = 0;
+      void other.play().catch(() => {});
+      setFront(which === 'a' ? 'b' : 'a');
+    }
+  };
+
+  const layer = (which: 'a' | 'b', ref: RefObject<HTMLVideoElement | null>) => (
+    <video
+      ref={ref}
+      className={`absolute inset-0 h-full w-full object-cover transition-opacity ease-linear ${
+        front === which ? 'opacity-100' : 'opacity-0'
+      }`}
+      style={{ transitionDuration: `${XFADE}s` }}
+      poster={poster}
+      autoPlay={which === 'a'}
+      muted
+      playsInline
+      preload={which === 'a' ? 'auto' : 'metadata'}
+      onTimeUpdate={handleTime(which)}
+    >
+      <source src={src} type="video/mp4" />
+    </video>
+  );
+
+  return (
+    <>
+      {layer('a', aRef)}
+      {layer('b', bRef)}
+    </>
   );
 }
