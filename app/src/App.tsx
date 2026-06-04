@@ -14,6 +14,9 @@ const About = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m
 const Affiliates = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.Affiliates })));
 const Contact = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.Contact })));
 const Policy = lazy(() => import('./pages/StaticPages').then((m) => ({ default: m.Policy })));
+const SizeGuide = lazy(() => import('./pages/Editorial').then((m) => ({ default: m.SizeGuide })));
+const Faq = lazy(() => import('./pages/Editorial').then((m) => ({ default: m.Faq })));
+const Lookbook = lazy(() => import('./pages/Editorial').then((m) => ({ default: m.Lookbook })));
 
 function Page({ children }: { children: React.ReactNode }) {
   return (
@@ -56,6 +59,9 @@ export default function App() {
           <Route path="/collections/:handle" element={<Page><Collection /></Page>} />
           <Route path="/about" element={<Page><About /></Page>} />
           <Route path="/affiliates" element={<Page><Affiliates /></Page>} />
+          <Route path="/size-guide" element={<Page><SizeGuide /></Page>} />
+          <Route path="/faq" element={<Page><Faq /></Page>} />
+          <Route path="/lookbook" element={<Page><Lookbook /></Page>} />
           <Route path="/contact" element={<Page><Contact /></Page>} />
           <Route path="/policies/:handle" element={<Page><Policy /></Page>} />
           <Route path="*" element={<Page><NotFound /></Page>} />

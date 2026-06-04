@@ -140,6 +140,8 @@ function Footer() {
           title="Help"
           links={[
             { label: 'Contact', to: '/contact' },
+            { label: 'FAQ', to: '/faq' },
+            { label: 'Size Guide', to: '/size-guide' },
             { label: 'Shipping', to: '/policies/shipping-policy' },
             { label: 'Returns', to: '/policies/refund-policy' },
           ]}
@@ -148,6 +150,7 @@ function Footer() {
           title="Brand"
           links={[
             { label: 'Our Story', to: '/about' },
+            { label: 'Lookbook', to: '/lookbook' },
             { label: 'New Arrivals', to: '/collections/new-arrivals' },
             { label: 'Affiliates', to: '/affiliates' },
           ]}
