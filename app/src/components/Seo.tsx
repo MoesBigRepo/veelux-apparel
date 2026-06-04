@@ -98,6 +98,7 @@ export function organizationJsonLd(): object {
     url: SITE.url,
     logo: abs('/assets/brand/logo-dark.png'),
     email: SITE.email,
+    sameAs: [SITE.instagram],
     address: { '@type': 'PostalAddress', addressLocality: 'Brooklyn', addressRegion: 'NY', addressCountry: 'US' },
   };
 }

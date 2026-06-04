@@ -49,6 +49,7 @@ export const SITE = {
   tagline: 'All Eyes on You — Limited Drops Available!',
   url: 'https://moesbigrepo.github.io/veelux-apparel',
   email: 'support@veeluxapparel.com',
+  instagram: 'https://www.instagram.com/veeluxapparel',
   city: 'Brooklyn, New York',
   description:
     'Veelux is Brooklyn-born luxury rhinestone streetwear — accessible, expressive, unapologetically original. Limited drops where music meets fashion.',
