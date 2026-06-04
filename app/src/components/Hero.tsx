@@ -129,7 +129,7 @@ function HeroVideo({ poster }: { poster?: string }) {
       autoPlay={which === 'a'}
       muted
       playsInline
-      preload={which === 'a' ? 'auto' : 'metadata'}
+      preload="metadata"
       onTimeUpdate={handleTime(which)}
     >
       <source src={src} type="video/mp4" />

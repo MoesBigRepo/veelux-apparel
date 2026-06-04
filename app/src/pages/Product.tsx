@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Seo, productJsonLd, breadcrumbJsonLd } from '../components/Seo';
 import { Reveal } from '../components/Motion';
 import { ProductCard } from '../components/ProductCard';
-import { asset, getProduct, products, priceLabel } from '../lib/data';
+import { asset, srcSet, getProduct, products, priceLabel } from '../lib/data';
 
 export function Product() {
   const { handle = '' } = useParams();
@@ -58,7 +58,7 @@ export function Product() {
                 }`}
                 aria-label={`View image ${i + 1}`}
               >
-                <img src={asset(img)} alt={`${product.title} thumbnail ${i + 1}`} className="h-full w-full object-cover" loading="lazy" />
+                <img src={asset(img)} srcSet={srcSet(img)} sizes="80px" alt={`${product.title} thumbnail ${i + 1}`} className="h-full w-full object-cover" loading="lazy" />
               </button>
             ))}
           </div>
@@ -72,6 +72,8 @@ export function Product() {
             >
               <img
                 src={asset(product.imagePaths[active])}
+                srcSet={srcSet(product.imagePaths[active])}
+                sizes="(min-width:1024px) 50vw, 100vw"
                 alt={`${product.title} — view ${active + 1}`}
                 className="absolute inset-0 h-full w-full object-cover"
               />

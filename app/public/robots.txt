@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://veeluxapparel.com/sitemap.xml
+Sitemap: https://moesbigrepo.github.io/veelux-apparel/sitemap.xml

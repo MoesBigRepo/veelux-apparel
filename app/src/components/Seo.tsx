@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from '@dr.pogodin/react-helmet';
 import { SITE } from '../lib/data';
 import type { Product } from '../lib/types';
 

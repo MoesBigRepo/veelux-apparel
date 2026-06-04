@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { asset, priceLabel } from '../lib/data';
+import { asset, srcSet, priceLabel } from '../lib/data';
 import type { Product } from '../lib/types';
+
+const CARD_SIZES = '(min-width:1024px) 25vw, 50vw';
 
 export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   const [hover, setHover] = useState(false);
-  const primary = asset(product.imagePaths[0]);
-  const secondary = asset(product.imagePaths[1] || product.imagePaths[0]);
+  const rawPrimary = product.imagePaths[0];
+  const rawSecondary = product.imagePaths[1] || rawPrimary;
+  const primary = asset(rawPrimary);
+  const secondary = asset(rawSecondary);
   return (
     <Link
       to={`/products/${product.handle}`}
@@ -17,6 +21,8 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
       <div className="relative aspect-[4/5] overflow-hidden bg-obsidian-2">
         <img
           src={primary}
+          srcSet={srcSet(rawPrimary)}
+          sizes={CARD_SIZES}
           alt={`${product.title} — front view`}
           loading={index < 4 ? 'eager' : 'lazy'}
           decoding="async"
@@ -27,6 +33,8 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         {secondary !== primary && (
           <img
             src={secondary}
+            srcSet={srcSet(rawSecondary)}
+            sizes={CARD_SIZES}
             alt={`${product.title} — alternate view`}
             loading="lazy"
             decoding="async"

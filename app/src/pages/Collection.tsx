@@ -2,7 +2,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { Seo, breadcrumbJsonLd } from '../components/Seo';
 import { Reveal, Stagger, StaggerItem } from '../components/Motion';
 import { ProductCard } from '../components/ProductCard';
-import { asset, getCollection, collectionProducts, collections } from '../lib/data';
+import { asset, srcSet, getCollection, collectionProducts, collections } from '../lib/data';
 
 export function Collection() {
   const { handle = '' } = useParams();
@@ -80,6 +80,8 @@ export function CollectionsIndex() {
                   {prod && (
                     <img
                       src={asset(prod.imagePaths[0])}
+                      srcSet={srcSet(prod.imagePaths[0])}
+                      sizes="(min-width:1024px) 33vw, 100vw"
                       alt={`${c.title} collection`}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover opacity-75 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"

@@ -10,7 +10,7 @@ function Marquee() {
     <div className="border-b hairline bg-obsidian text-bone overflow-hidden">
       <div className="flex whitespace-nowrap [animation:marquee_28s_linear_infinite] motion-reduce:[animation:none]">
         {Array.from({ length: 8 }).map((_, i) => (
-          <span key={i} className="label py-2.5 px-8 text-[var(--color-shimmer)]">
+          <span key={i} aria-hidden={i > 0 || undefined} className="label py-2.5 px-8 text-[var(--color-shimmer)]">
             {text}
           </span>
         ))}

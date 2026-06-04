@@ -1,7 +1,7 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { Seo } from '../components/Seo';
 import { Reveal } from '../components/Motion';
-import { SITE, asset, getProduct } from '../lib/data';
+import { SITE, asset, srcSet, getProduct } from '../lib/data';
 import refundMd from '../data/refund-policy.md?raw';
 import shippingMd from '../data/shipping-policy.md?raw';
 
@@ -18,7 +18,7 @@ export function About() {
     <>
       <Seo title="Our Story" description="Born in Brooklyn, built for the bold. The Veelux story — where music meets fashion." path="/about" image={hero?.imagePaths[0]} />
       <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
-        {hero && <img src={asset(hero.imagePaths[0])} alt="Veelux — Brooklyn streetwear" className="absolute inset-0 h-full w-full object-cover opacity-60" />}
+        {hero && <img src={asset(hero.imagePaths[0])} srcSet={srcSet(hero.imagePaths[0])} sizes="100vw" alt="Veelux — Brooklyn streetwear" className="absolute inset-0 h-full w-full object-cover opacity-60" />}
         <div className="absolute inset-0 bg-gradient-to-t from-obsidian to-transparent" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5">
           <Reveal>

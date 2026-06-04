@@ -16,6 +16,17 @@ export function asset(path: string): string {
   return path.startsWith('/') ? `${base}${path}` : `${base}/${path}`;
 }
 
+/**
+ * Responsive srcset for a product JPG: 480w/960w WebP variants (generated at
+ * build time, universally supported in srcset-capable browsers) with the
+ * compressed original as the largest candidate. `src` stays the JPG fallback.
+ */
+export function srcSet(path: string): string | undefined {
+  if (!/\.jpe?g$/i.test(path)) return undefined;
+  const base = path.replace(/\.jpe?g$/i, '');
+  return `${asset(`${base}-480.webp`)} 480w, ${asset(`${base}-960.webp`)} 960w, ${asset(path)} 1600w`;
+}
+
 const byHandle = new Map(products.map((p) => [p.handle, p]));
 
 export function getProduct(handle: string): Product | undefined {
@@ -36,7 +47,7 @@ export const SITE = {
   name: 'VEELUX',
   legalName: 'Veelux Apparel',
   tagline: 'All Eyes on You — Limited Drops Available!',
-  url: 'https://veeluxapparel.com',
+  url: 'https://moesbigrepo.github.io/veelux-apparel',
   email: 'support@veeluxapparel.com',
   city: 'Brooklyn, New York',
   description:

@@ -1,0 +1,43 @@
+# VEELUX — Brooklyn Luxury Rhinestone Streetwear
+
+> Veelux is Brooklyn-born luxury rhinestone streetwear: accessible, expressive, unapologetically
+> original. Limited drops where music meets fashion. Founded by a Brooklyn music artist.
+> Tagline: "All Eyes on You — Limited Drops Available!"
+
+Site: https://moesbigrepo.github.io/veelux-apparel
+Contact: support@veeluxapparel.com
+Checkout: product pages link to the brand's live Shopify checkout.
+Returns: 7-day window, store credit. Shipping: worldwide.
+
+## Products (10)
+- [VEELUX Men’s Luxury Rhinestone Flannel Shirt – Black & White Plaid](https://moesbigrepo.github.io/veelux-apparel/products/veelux-mens-luxury-rhinestone-flannel-shirt) — $80.00
+- [VEELUX Women’s Luxury Sweatpants – Pink](https://moesbigrepo.github.io/veelux-apparel/products/veelux-womens-luxury-pink-sweatpants) — $80.00
+- [VEELUX Women’s Luxury Oversized Hoodie – Pink](https://moesbigrepo.github.io/veelux-apparel/products/veelux-womens-luxury-pink-hoodie) — $80.00
+- [Veelux Men’s Luxury Sweatpants – Black Reflective Streetwear Joggers](https://moesbigrepo.github.io/veelux-apparel/products/veelux-mens-luxury-black-sweatpants) — $80.00
+- [Veelux Men’s Luxury Oversized Hoodie – Black Rhinestone Streetwear Pullover](https://moesbigrepo.github.io/veelux-apparel/products/veelux-mens-luxury-black-hoodie) — $80.00
+- [StarPower Hoodies](https://moesbigrepo.github.io/veelux-apparel/products/untitled-oct24_15-22) — $145.00
+- [Stacked Denim Jeans](https://moesbigrepo.github.io/veelux-apparel/products/plain-jean) — $100.00
+- [Rhinestone Star Power Jean](https://moesbigrepo.github.io/veelux-apparel/products/rhinestone-star-power-jean-special-edition) — $165.00
+- [Rhinestone Jean Jacket](https://moesbigrepo.github.io/veelux-apparel/products/jean-jacket) — $165.00
+- [StarPower Power Shirt](https://moesbigrepo.github.io/veelux-apparel/products/rhinestone-shirt) — $120.00
+
+## Collections (12)
+- [New Arrivals](https://moesbigrepo.github.io/veelux-apparel/collections/new-arrivals)
+- [Featured](https://moesbigrepo.github.io/veelux-apparel/collections/frontpage)
+- [Men](https://moesbigrepo.github.io/veelux-apparel/collections/men)
+- [Women](https://moesbigrepo.github.io/veelux-apparel/collections/womens-streetwear)
+- [Hoodies](https://moesbigrepo.github.io/veelux-apparel/collections/hoodies)
+- [Sweatpants](https://moesbigrepo.github.io/veelux-apparel/collections/sweatpants)
+- [Jeans](https://moesbigrepo.github.io/veelux-apparel/collections/jean)
+- [Denim & Trousers](https://moesbigrepo.github.io/veelux-apparel/collections/plain-jean-trouser)
+- [Jackets](https://moesbigrepo.github.io/veelux-apparel/collections/jacket)
+- [Flannels](https://moesbigrepo.github.io/veelux-apparel/collections/flannels)
+- [All Products](https://moesbigrepo.github.io/veelux-apparel/collections/all-products)
+- [Shop All](https://moesbigrepo.github.io/veelux-apparel/collections/all)
+
+## Pages
+- [Our Story](https://moesbigrepo.github.io/veelux-apparel/about)
+- [Affiliate Program](https://moesbigrepo.github.io/veelux-apparel/affiliates)
+- [Contact](https://moesbigrepo.github.io/veelux-apparel/contact)
+- [Shipping Policy](https://moesbigrepo.github.io/veelux-apparel/policies/shipping-policy)
+- [Returns & Refunds](https://moesbigrepo.github.io/veelux-apparel/policies/refund-policy)

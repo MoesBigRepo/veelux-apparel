@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { Seo, organizationJsonLd, websiteJsonLd } from '../components/Seo';
 import { Reveal, Stagger, StaggerItem } from '../components/Motion';
 import { ProductCard } from '../components/ProductCard';
-import { SITE, asset, collectionProducts, getProduct, getCollection } from '../lib/data';
+import { SITE, asset, srcSet, collectionProducts, getProduct, getCollection } from '../lib/data';
 import { Hero } from '../components/Hero';
 
 export function Home() {
@@ -52,6 +52,8 @@ export function Home() {
             <motion.img
               style={{ y: imgY }}
               src={asset(editorial.imagePaths[0])}
+              srcSet={srcSet(editorial.imagePaths[0])}
+              sizes="(min-width:768px) 50vw, 100vw"
               alt={`${editorial.title} — Veelux editorial`}
               className="absolute inset-0 h-[116%] w-full object-cover -top-[8%]"
               loading="lazy"
@@ -93,6 +95,8 @@ export function Home() {
                   {prod && (
                     <img
                       src={asset(prod.imagePaths[0])}
+                      srcSet={srcSet(prod.imagePaths[0])}
+                      sizes="(min-width:1024px) 25vw, 50vw"
                       alt={`${c!.title} collection`}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover opacity-80 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105"
