@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section ref={ref} className="relative h-[92vh] min-h-[560px] w-full overflow-hidden">
       <motion.div style={{ y, scale }} className="absolute inset-0">
-        {/* Seedance 2.0 brand film; poster carries LCP and shows if video absent/reduced-motion */}
+        {/* Seedance 2.0 brand film; still poster only for reduced-motion users */}
         <HeroVideo poster={POSTER} />
         <div className="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-transparent to-obsidian" />
         <div className="absolute inset-0 bg-obsidian/25" />
@@ -125,7 +125,6 @@ function HeroVideo({ poster }: { poster?: string }) {
         front === which ? 'opacity-100' : 'opacity-0'
       }`}
       style={{ transitionDuration: `${XFADE}s` }}
-      poster={poster}
       autoPlay={which === 'a'}
       muted
       playsInline
