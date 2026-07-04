@@ -15,3 +15,11 @@ dist-ssr/
 .vscode/*
 !.vscode/extensions.json
 .idea/
+.venv/
+venv/
+browsers/
+.next/
+__pycache__/
+ocr_cache/
+.env
+.env.*
